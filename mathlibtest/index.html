@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
-  <title>MathJax v3 with interactive TeX and MathML input and HTML output</title>
+  <title>MathJax v3 with interactive TeX and MathML input and SVG output</title>
   <script>
   MathJax = {
     tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+    svg: {fontCache: 'global'},
     startup: {
       ready: function () {
         MathJax.startup.defaultReady();
@@ -17,7 +18,7 @@
     }
   }
   </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
   <script>
     function convert() {
       //
@@ -87,7 +88,7 @@
 <body>
 <div id="frame">
 
-<h1>MathJax v3: TeX &amp; MathML to HTML</h1>
+<h1>MathJax v3: TeX &amp; MathML to SVG</h1>
 
 <textarea id="input" rows="15" cols="10">
 <!--  Enter HTML containing TeX or MathML below -->
