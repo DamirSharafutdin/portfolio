@@ -1,80 +1,73 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Comments Section</title>
-<style>
-body {
-    font-family: sans-serif;
+// Function to retrieve comments from the txt file
+function getComments() {
+    fetch('comments.txt')
+        .then(response => response.text())
+        .then(commentsText => {
+            const comments = JSON.parse(commentsText);
+            let commentsHTML = '';
+
+            comments.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = `<p class="comment-name">${comment.name} says:</p><p>${comment.comment}</p>`;
+
+                commentsHTML += commentDiv.outerHTML;
+            });
+
+            document.getElementById('comments-section').innerHTML = commentsHTML;
+        })
+        .catch(error => console.error(error));
 }
-.comment {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-.comment-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-</style>
-</head>
-<body>
 
-<h1>Comments</h1>
-
-<div>
-    <input type="text" id="commentName" placeholder="Your Name">
-    <br>
-    <textarea id="commentText" placeholder="Your Comment"></textarea>
-    <br>
-    <button onclick="addComment()">Add Comment</button>
-</div>
-
-<div id="commentsList"></div>
-
-<script>
-// Main JavaScript File
-
-// Comments functionality
-let comments = [];
-
+// Function to add a new comment to the txt file and comments section
 function addComment() {
-    const text = document.getElementById('commentText').value;
-    const name = document.getElementById('commentName').value;
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
 
-    if (!text || !name) {
-        alert('Please fill in both name and comment');
-        return;
+    if (name && comment) {
+        const commentJSON = {
+            name,
+            comment
+        };
+
+        // Create a new comment string
+        const newComment = `${JSON.stringify(commentJSON)}\n`;
+
+        // Read the existing comments
+        fetch('comments.txt')
+            .then(response => response.text())
+            .then(commentsText => {
+                const existingComments = commentsText ? JSON.parse(commentsText) : [];
+
+                // Update the existing comments with the new comment
+                const updatedComments = existingComments.concat(commentJSON);
+
+                // Write the updated comments to the txt file
+                return fetch('comments.txt', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain'
+                    },
+                    body: JSON.stringify(updatedComments)
+                });
+            })
+            .then(() => {
+                // Add the new comment to the comments section
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = `<p class="comment-name">${name} says:</p><p>${comment}</p>`;
+
+                document.getElementById('comments-section').appendChild(commentDiv);
+
+                // Clear the input fields
+                document.getElementById('name').value = '';
+                document.getElementById('comment').value = '';
+            })
+            .catch(error => console.error(error));
+    } else {
+        alert('Please fill in both fields.');
     }
-
-    const comment = {
-        id: Date.now(),
-        text,
-        name,
-        date: new Date().toLocaleDateString()
-    };
-
-    comments.push(comment);
-    displayComments();
-
-    // Clear inputs
-    document.getElementById('commentText').value = '';
-    document.getElementById('commentName').value = '';
 }
 
-function displayComments() {
-    const commentsDiv = document.getElementById('commentsList');
-    commentsDiv.innerHTML = comments.map(comment => `
-        <div class="comment">
-            <div class="comment-header">
-                <strong>${comment.name}</strong>
-                <span>${comment.date}</span>
-            </div>
-            <p>${comment.text}</p>
-        </div>
-    `).join('');
-}
-</script>
-
-</body>
-</html>
+// Load comments from the txt file when the page loads
+getComments();
