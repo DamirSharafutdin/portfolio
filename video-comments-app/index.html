@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Comments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Video Player</h1>
+</header>
+
+<main>
+    <div class="video-container">
+        <video id="video-player" controls>
+            <source src="your-video-file.mp4" type="video/mp4">  <!-- Replace with your video file -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="video-info">
+        <h2>Video Title</h2>
+        <p>Description of the video goes here. Include details about the content, creator, and other relevant information.</p>
+    </div>
+    
+    <div class="comments-section">
+        <h3>Comments</h3>
+        <div id="comments-display"></div>
+        <div class="comment-form">
+            <input type="text" id="username" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" rows="3" required></textarea>
+            <button onclick="addComment()">Submit Comment</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 Video Player App</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
