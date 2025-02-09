@@ -1,0 +1,99 @@
+/* 
+  Main Stylesheet
+  Author: Replit User
+  Description: Core styles for the website
+*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    /* Navigation list layout */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Section Styles */
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+/* Hero Section Styles */
+#hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+#hero h1 {
+    color: #fff;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f7f7f7;
+    
+}
+
+/* Services Section Styles */
+#services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#services li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f7f7f7;
+    
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
