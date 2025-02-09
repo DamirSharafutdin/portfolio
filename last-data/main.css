@@ -1,13 +1,11 @@
 /* 
-  Main Stylesheet
-  Author: Replit User
-  Description: Core styles for the website
+    Styles for the Home Page
+    Author: [Your Name]
+    Date: [Today's Date]
 */
 
-/* Reset and Base Styles */
+/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -17,16 +15,16 @@ body {
     padding: 0;
 }
 
-/* Navigation Styles */
-nav {
-    background: #333;
-    padding: 1rem;
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
 }
 
+/* Navigation Menu Styles */
 nav ul {
-    /* Navigation list layout */
-    display: flex;
-    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -40,13 +38,6 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
-}
-
-
-/* Section Styles */
-section {
-    padding: 2rem;
-    margin: 1rem 0;
 }
 
 /* Hero Section Styles */
@@ -63,7 +54,7 @@ section {
 /* About Section Styles */
 #about {
     background-color: #f7f7f7;
-    
+    padding: 2em;
 }
 
 /* Services Section Styles */
@@ -80,20 +71,58 @@ section {
 /* Contact Section Styles */
 #contact {
     background-color: #f7f7f7;
-    
+    padding: 2em;
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    gap: 1rem;
+/* Comments Section Styles */
+#comments {
+    max-width: 800px;
+    margin: 2rem auto;
     padding: 1rem;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+    padding: 0.5rem;
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-form input {
+    padding: 0.5rem;
+}
+
+.comment-form button {
+    padding: 0.5rem;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #666;
 }
 
 /* Footer Styles */
 footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
     text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
 }
