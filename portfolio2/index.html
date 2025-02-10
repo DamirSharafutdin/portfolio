@@ -24,36 +24,45 @@
         <section class="projects">
             <h2>Projects</h2>
 
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1">
-                <div class="project-info">
-                    <h3>Project Title 1</h3>
-                    <p>This project involved [brief description of the project].</p>
-                    <video controls>
-                        <source src="project1-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div class="project" onclick="toggleProjectDetails('project1Details')">
+                <img src="project1-thumbnail.jpg" alt="Project 1">
+                <h3>Project Title 1</h3>
             </div>
-            
-            <div class="project">
-                <img src="project2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Project Title 2</h3>
-                    <p>This project showcases [brief description of the project].</p>
-                    <video controls>
-                        <source src="project2-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div id="project1Details" class="project-details hidden">
+                <p><strong>Description:</strong> This project involved [detailed description of the project].</p>
+                <img src="project1-image1.jpg" alt="Project 1 Image 1">
+                <img src="project1-image2.jpg" alt="Project 1 Image 2">
+                <video controls>
+                    <source src="project1-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h4>Project Code:</h4>
+                <pre><code>console.log('Hello World');</code></pre>
             </div>
 
-            <!-- Add more projects as needed -->
+            <div class="project" onclick="toggleProjectDetails('project2Details')">
+                <img src="project2-thumbnail.jpg" alt="Project 2">
+                <h3>Project Title 2</h3>
+            </div>
+            <div id="project2Details" class="project-details hidden">
+                <p><strong>Description:</strong> This project showcases [detailed description of the project].</p>
+                <img src="project2-image1.jpg" alt="Project 2 Image 1">
+                <video controls>
+                    <source src="project2-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h4>Project Code:</h4>
+                <pre><code>let project = 'Portfolio';</code></pre>
+            </div>
+
+            <!-- Add more projects similarly -->
         </section>
     </div>
-    
+
     <footer>
         <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
