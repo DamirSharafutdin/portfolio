@@ -1,0 +1,22 @@
+Features Explained:
+Header with Avatar and Description: The header displays your avatar (profile picture), name, and a short description.
+
+Project Buttons: Each project is represented as a button, which opens a modal with detailed information when clicked.
+
+Modal for Detailed Project View: The modal includes:
+
+Project Title
+Full Description
+Photo Gallery (you can add multiple images)
+Video section (you can add links to videos)
+Code snippet display area
+Comment section where visitors can leave comments
+Comment Submission: Users can submit their name and comments, which will be displayed below the comment input area.
+
+Credits Section: The footer section contains simple credits for the portfolio design.
+
+Customization:
+Replace placeholder images (like your-avatar.jpg, project1.jpg, etc.) with actual paths to your images.
+Fill in the project details with your actual project titles, descriptions, images, videos, and code.
+Style the page further with additional CSS properties as necessary to match your design preferences.
+This code should serve as a solid foundation for your professional portfolio webpage. Feel free to modify it and tailor it to your specific needs!
