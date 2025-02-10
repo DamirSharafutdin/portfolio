@@ -1,0 +1,8 @@
+This design will allow users to switch between filter options, like 'all' or specific project categories, to view only relevant projects.
+
+Additional Ideas
+Project Images: Replace placeholder images (project1.jpg, etc.) with actual images of your projects.
+Project Categories: Add data-category attribute to project cards to enable filtering.
+Responsive Design: Improve responsiveness on smaller screens by using CSS Grid or Flexbox.
+Animated Transitions: Use CSS animations to enhance the filtering experience.
+Feel free to customize and enhance this design to better suit your needs!
