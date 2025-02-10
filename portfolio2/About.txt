@@ -1,8 +1,5 @@
-This design will allow users to switch between filter options, like 'all' or specific project categories, to view only relevant projects.
-
-Additional Ideas
-Project Images: Replace placeholder images (project1.jpg, etc.) with actual images of your projects.
-Project Categories: Add data-category attribute to project cards to enable filtering.
-Responsive Design: Improve responsiveness on smaller screens by using CSS Grid or Flexbox.
-Animated Transitions: Use CSS animations to enhance the filtering experience.
-Feel free to customize and enhance this design to better suit your needs!
+Notes:
+Replace placeholder text ([Your Profession], [Your Interests], etc.) with your actual information.
+Update the paths of images and videos (e.g., avatar.jpg, project1.jpg, etc.) with your actual media files.
+Customize styles in the CSS file to match your branding or aesthetic preferences.
+You can also incorporate JavaScript if you need additional interactivity (e.g., modal windows for project details).
