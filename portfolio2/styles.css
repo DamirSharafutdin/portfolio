@@ -1,8 +1,70 @@
-function toggleProjectDetails(id) {
-    const details = document.getElementById(id);
-    if (details.classList.contains('hidden')) {
-        details.classList.remove('hidden');
-    } else {
-        details.classList.add('hidden');
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.info {
+    max-width: 600px;
+}
+
+.projects {
+    margin-top: 2rem;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100px;
+    height: 75px;
+    margin-right: 1rem;
+}
+
+.project-details {
+    background: #f1f1f1;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #f1f1f1;
 }
