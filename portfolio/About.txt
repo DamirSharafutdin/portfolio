@@ -1,0 +1,16 @@
+How to Use This Template
+Copy the HTML Code: Save the HTML code in a file named index.html.
+
+Copy the CSS Code: Save the CSS code in a file named styles.css.
+
+Custom Information: Replace placeholder text (Your Name, Project Titles, etc.) with your actual information.
+
+Links to Projects: In the project section, replace # with your actual project URLs.
+
+Browser Preview: Open index.html in your web browser to see the portfolio in action.
+
+Additional Suggestions
+Add Images: Incorporate images for your profile and project thumbnails to make it visually appealing.
+Responsiveness: Consider adding media queries to improve responsiveness on mobile devices.
+Animations: You can include CSS animations or JavaScript libraries for added interactivity.
+Deployment: Host your webpage on platforms like GitHub Pages, Netlify, or Vercel for sharing with others.
