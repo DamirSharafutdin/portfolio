@@ -41,24 +41,30 @@ header {
 
 .project {
     display: flex;
+    align-items: center;
     margin: 1.5rem 0;
+    cursor: pointer;
 }
 
 .project img {
-    width: 200px;
-    height: 150px;
+    width: 100px;
+    height: 75px;
     margin-right: 1rem;
 }
 
-.project-info {
-    max-width: 600px;
+.project-details {
+    background: #f1f1f1;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
     background: #f1f1f1;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
