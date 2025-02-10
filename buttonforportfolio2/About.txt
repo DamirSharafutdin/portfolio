@@ -1,15 +1,12 @@
 Explanation:
-HTML Structure: The webpage consists of a container where project items are displayed. Each project has a small image and a title.
+HTML Structure: The webpage has a main container for project buttons, each representing a unique project. Clicking on a button opens a modal with detailed information about the project.
 
-Modal Implementation: When a project image is clicked, a modal pops up displaying the project's title, description, additional photos, a video, and a link to the source code.
+CSS Styles: The styles ensure the project buttons look good and the modal is user-friendly.
 
-CSS Styling: The CSS is used for basic styling of the page, project items, and modal.
+JavaScript Functionality: 
 
-JavaScript Functions:
-
-openModal: This function is triggered when an image is clicked. It populates the modal with the project's information and displays it.
-closeModal: This function hides the modal when invoked.
-Dependencies:
-Replace the placeholder images (small-photo1.jpg, photo1a.jpg, etc.) and video files with actual paths to your project assets. You can also expand this code further based on your requirements.
-
-Enjoy building your project showcase!
+The projects array stores the information for each project.
+The openModal() function is triggered when a project button is clicked, populating the modal with the corresponding project's details.
+The closeModal() function closes the modal.
+Usage:
+To display actual images and videos, replace placeholders (like project1.jpg, project1_img1.jpg) with real image paths and provided video links accordingly.
