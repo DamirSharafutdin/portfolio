@@ -1,0 +1,4 @@
+Update Project Details: Replace the placeholder text and links to your actual project details, including descriptions, images, videos, and code.
+Avatar and Header Text: Update your profile image and header text to reflect your personal branding.
+CSS Customization: Feel free to adjust the styles in the CSS file to match your desired aesthetic.
+Project Counts: Add more projects by duplicating the gallery-img block and updating the image source, id, and project details accordingly.
